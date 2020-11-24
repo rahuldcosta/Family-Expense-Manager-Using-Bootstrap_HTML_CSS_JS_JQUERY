@@ -1,0 +1,77 @@
+
+
+body{
+    background-image: url(/expensemanager/assets/imgs/nice-background.jpg) ;
+         background-attachment:fixed;
+  font-family:"Times New Roman", Georgia, Serif;
+}
+
+
+
+form {
+    background: #FFFFCC;
+    border: 1px solid burlywood;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1.2em;
+    box-shadow: 0px 0px 10px 2px darkkhaki; 
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 350px) {
+    
+}
+
+input[type=text] {
+    max-width: 1000px;
+    height: 6vh;
+    min-height: 28px;
+}
+
+button {
+    max-width: 1000px;
+    height: 6vh;
+    min-height: 32px;
+}
+
+div#header {
+    text-align: center;
+    color: white;
+    border-bottom: 1px solid dimgrey;
+}
+
+.col-md-4 {
+
+}
+
+.group {
+    width: 100%;
+   
+}
+
+.style1 {
+    font-size: 0.9em;
+}
+
+.style2 {
+    padding-left: 15px;
+}
+
+.form-group {
+    padding-bottom: 0.4vh;
+    padding-top: 0.4vh;
+    margin-top: 0.8vh;
+    margin-bottom: 0.8vh;
+}
+
+.style3 {
+    width:100%;
+    max-height: 380px;
+    height:50vh;
+    border: 1px solid blue;
+}
+
+.style4 {
+    border: 1px solid blue;
+}

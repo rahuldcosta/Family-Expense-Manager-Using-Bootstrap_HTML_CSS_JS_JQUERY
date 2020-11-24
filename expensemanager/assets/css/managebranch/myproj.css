@@ -1,0 +1,178 @@
+.myborder {
+border:0px solid black;
+border-radius:0px;
+}
+
+
+
+
+#SliderM {
+    width:13.3333%;height:100%;float:left;border-top: none;font-size:102%;border-right:3px solid blue;
+   
+        
+}
+#HomeButton {
+    width:33.3333%;float:left;border:5px solid blue;border-left:none;border-bottom:none;
+}
+#NotfiyCount {
+    position:relative;top:0px;left:4px;background:blue;
+}
+#MiddleBar {
+    
+    width:100%;border:1px border black;font-size:100%;margin-top:1.6em;margin-bottom:1.9em;margin-left: 0%;
+    background: #FFFFCC;
+    border-radius: 15px;
+    
+}
+
+#Maincontainer{
+    font-size:1.3em;width:100%;
+    
+}
+
+#TopBar{
+    border-bottom:3px solid blue;position:fixed;top:0px;width:100%;background: #FFFFCC;z-index:1;
+    height:1.75em;
+}
+
+#BottomBar {
+position:fixed;bottom:0px;width:100%;background: #FFFFCC;
+border:1px solid black;
+}
+
+body{
+    
+        background-image: url(/expensemanager/assets/imgs/nice-background.jpg) ;
+         background-attachment:fixed;
+    
+    }
+#MenuContainer {
+    position: fixed;
+    z-index: 3;
+    top: 0px;
+    left: 0px;
+    width: 0%;
+    font-size: 6%;
+    color: black;
+    font-weight: bold;
+    -webkit-transition-timing-function: ease;
+    transition: width 0.1s,font-size 0.1s;
+    
+    
+}
+.lister{
+    
+    display:block;
+    width:80vw;
+        font-size: 160%;
+    
+}
+.listeroff {
+    display:none;
+    width:0%;
+        font-size: 6%;
+}
+
+#list {
+    display: none;
+}
+
+
+.projectfont {
+ font-family: "Times New Roman";
+    font-size: 80%;
+    font-weight: bold;
+  
+}
+
+
+.Homeitem{
+  border-bottom: 3px dotted black;
+    border-radius: 5px;
+
+
+}
+
+.sidemenuops {
+    
+    float: right;
+}
+
+
+.table-curved {
+    border-collapse: collapse;
+}
+.table-curved td + td {
+    text-align: right;
+}
+.table-curved tr:first-child {
+   border-top: 3px solid black;
+}
+.table-curved tr:last-child {
+   border-bottom: none;
+}
+
+.itemlist {
+
+    width: 0px;
+    display: none;
+
+
+}
+
+
+@media only screen and (min-width: 950px) and (min-width: 587px) {
+
+ #submitter { border :2px solid black ;border-radius:7px;}
+  #MenuContainer {
+    position: fixed;
+    z-index: 3;
+    top: 0px;
+    left: 11%;
+    width: -50vw;
+    font-size: 6%;
+    color: black;
+    font-weight: bold;
+    -webkit-transition-timing-function: ease;
+    transition: width 0.1s,font-size 0.1s;
+    
+    
+}
+#Maincontainer{
+    font-size:1.3em;
+    margin:0 auto;
+   
+width:80%;
+    
+    
+}
+    
+    #TopBar{
+    border-bottom:3px solid blue;position:relative;top:0px;width:100%;background: #FFFFCC;z-index:1;
+    height:1.75em;
+        margin: auto;
+}
+#MiddleBar {
+    width:100%;border:1px border black;font-size:100%;margin-top:1.6em;margin-bottom:3.5em;margin-left: 0%;
+    background: #FFFFCC;
+}
+#BottomBar {
+height:8%;width:80%;background: #FFFFCC;
+   z-index: 5;
+ border:none;
+    position:fixed;
+    background-image: url(/expensemanager/assets/imgs/nice-background.jpg);
+   
+}
+    
+}
+
+
+
+
+
+
+
+
+
+

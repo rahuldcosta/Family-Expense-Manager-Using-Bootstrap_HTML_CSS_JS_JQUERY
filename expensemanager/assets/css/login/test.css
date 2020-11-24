@@ -1,0 +1,71 @@
+body{
+    
+        background-image: url(/expensemanager/assets/imgs/nice-background.jpg);
+        background-attachment:fixed;
+    }
+
+div {
+	border: 0px solid red;
+	color: #5a5656;
+}
+
+a {
+	text-decoration: none;
+}
+
+@media only screen and (max-width: 700px) {
+	h2 {
+		font-size: 20px;
+	}
+}
+
+#login {
+	margin: auto;
+	max-width: 315px;
+	min-width: 235px;
+	margin-top: 8vh;
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+	color: #5a5656;
+}
+
+form fieldset {
+	border: 2px solid #5CA2A9;
+	background-color: #F2F8F9;
+}
+
+form fieldset input[type="text"], input[type="password"] {
+	background-color: #e5e5e5;
+	border: none;
+	border-radius: 3px;
+	color: #5a5656;
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	height: 10vh;
+	max-height: 3em;
+	min-height: 2em;
+	padding: 0px 10px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+form fieldset input[type="submit"] {
+	background-color: #008dde;
+	border: none;
+	border-radius: 3px;
+	color: #f4f4f4;
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+	height: 12vh;
+	max-height: 3em;
+	min-height: 2.2em;
+	text-transform: uppercase;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+form fieldset input[type="submit"]:hover {
+	background-color: #00A0FF;
+}

@@ -1,0 +1,117 @@
+select * from customer,family,datesubtable,expenses 
+where username="rahuldc" && family.family_name="dcostas_13" && username=c_username && date_id=d_id
+
+
+select start_date,c_username,family.family_name,tag,price from datesubtable,expenses,family,customer
+  where date_id=d_id && start_date="2015-04-20" && c_username="rahuldc" && c_username=username && customer.family_name=family.family_name
+
+select start_date,c_username,family.family_name,tag,price from datesubtable,expenses,family,customer
+ where date_id=d_id && c_username=username && family.family_name="dcostas_13"  && customer.family_name=family.family_name
+ 
+ 
+ //summed entry for a date  ==> (date  and total amount fordate)
+ 
+select start_date,sum(price) from datesubtable,expenses,family,customer
+ where date_id=d_id && c_username=username && family.family_name="dcostas_13"  && customer.family_name=family.family_name
+  GROUP BY start_date
+  ORDER BY start_date DESC;
+ 
+ //tag and price wid exp_id  (under the summed entry for date)
+ select exp_id,tag,price from datesubtable,expenses,family,customer where date_id=d_id && start_date="2015-04-20" && c_username=username && family.family_name="dcostas_13"  && customer.family_name=family.family_name
+ 
+
+//render tag  (tag || price)
+
+select tag,SUM(price) from datesubtable,expenses,family,customer
+ where date_id=d_id && c_username=username && family.family_name="dcostas_13"  && customer.family_name=family.family_name 
+ GROUP BY tag;
+ 
+ 
+ //date and price (wid accordance to render tag)
+ 
+ select exp_id,start_date,price from datesubtable,expenses,family,customer where date_id=d_id && tag="Vegetables" && c_username=username && family.family_name="dcostas_13"  && customer.family_name=family.family_name
+
+
+//displaying expense record    //
+select exp_id,tag,start_date,price,description,repeatstatus,end_status,end_date from datesubtable,expenses
+ where date_id=d_id && exp_id=2
+ 
+ 
+ 
+ //While Updating an EXpense...
+
+//Check if count of d_id > 1
+select date_id,count(date_id) from expenses
+ where date_id='1'
+ 
+ 
+ //If d_id== 1
+ 
+  UPDATE datesubtable SET tag="CC" start_date="2015-04-20" WHERE d_id = 1;
+  
+  UPDATE expenses SET date_id = 2, price ='452', description = 'adsadasdadd', repeatstatus = 'Weekly', end_status = 'On Date',end_date = '2015-04-20' WHERE exp_id = 3;
+  
+  //Else do Insert
+  
+ INSERT INTO datesubtable (d_id, tag, c_username, start_date) VALUES ('7', 'Vegetables', 'rahuldc', '2015-04-13');
+ 
+ UPDATE expenses SET date_id = 7, price ='452', description = 'adsadasdadd', repeatstatus = 'Weekly', end_status = 'On Date',end_date = '2015-04-20' WHERE exp_id = 3;
+ 
+ 
+ 
+
+ 
+ 
+ 
+ /////////////////////////INSERT QUERIES////////////////////////////////////////
+ 
+ 
+ //Customer Registration
+ INSERT INTO family (family_name) VALUES ('dias101100');
+ 
+ 
+ ///Notifications
+ SELECT tag FROM customer,datesubtable,expenses where date_id=d_id
+and username=c_username
+
+and username='rahuldc999@gmail.com'
+
+and start_date='2015-04-25' and rstatus=1
+
+
+
+// converting timestamp to date
+SELECT date_format(bdate, '%Y-%m-%d') as date FROM `budget`
+
+//the budget for a family
+SELECT * FROM family,budget where bgid=bugid
+and family_name in (select family_name from customer where username='rahuldc999@gmail.com')
+and date_format(bdate, '%Y-%m-%d') = '2015-04-25'
+
+
+SELECT family_name,bgid,maxbudget,date_format(bdate, '%Y-%m-%d') as dated FROM family,budget where bgid=bugid
+and family_name in (select family_name from customer where username='rahuldc999@gmail.com')
+and bdate  between  DATE_FORMAT(NOW() ,'%Y-%m-01') AND ADDDATE(LAST_DAY(NOW()), 1)
+
+oper=update&bugetid=3&maxb=324&bdate=2015-04-06
+
+
+
+ select family_name from customer where customer.family_name in(SELECT distinct family_name FROM family) && username='rahuldc999@gmail.com' 
+ 
+ 
+ 
+  select start_date,exp_id,tag,price from datesubtable,expenses,customer where date_id=d_id && username=c_username  && family_name in (select family_name from customer where customer.family_name in(SELECT distinct family_name FROM family) && username='rahuldc999@gmail.com' )
+  ORDER BY tag ASC
+
+  ////////Stats Analyser
+  SELECT sum(price)as price ,family_name FROM expenses,datesubtable,customer where date_id=d_id and username=c_username and family_name='dcostas_13' and start_date between  DATE_FORMAT(NOW() ,'%Y-%m-01') AND ADDDATE(LAST_DAY(NOW()), 1)
+  
+  
+  SELECT offerid,vendorname,tag,description FROM branch b,offer,vendor v where contact=branchno
+and b.username=v.username
+and city='Ponda' and state='Goa' and country='India'
+
+
+
+SELECT vendorname, tag,offerid,description,startdate,enddate,state,country,city,branchno FROM branch b,offer,vendor v where  branchno=contact and v.username=b.username 
